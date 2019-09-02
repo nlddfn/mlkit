@@ -1,0 +1,21 @@
+# Ansible
+*.retry
+
+# Mac OS
+.DS_Store
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Python
+*.egg-info
+.pytest_cache/
+*__pycache__/
+.tox/
+.coverage
+DEV*
+build/
+dist/
+pantalytics.egg-info/
