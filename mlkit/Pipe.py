@@ -2,10 +2,10 @@ import pandas as pd
 import os
 from sklearn.externals import joblib
 
-from clver.model_utils.BaseData import Data
-from clver.model_utils.BasePreProcessing import BasePreProcessing
-from clver.model_utils.BaseSupervised import BaseClassifier, BaseRegressor
-from clver.model_utils.BaseUnsupervised import BaseUnsupervised
+from mlkit.BaseData import Data
+from mlkit.BasePreProcessing import BasePreProcessing
+from mlkit.BaseSupervised import BaseClassifier, BaseRegressor
+from mlkit.BaseUnsupervised import BaseUnsupervised
 
 
 class Pipeline(object):

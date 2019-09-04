@@ -19,3 +19,4 @@ DEV*
 build/
 dist/
 pantalytics.egg-info/
+examples

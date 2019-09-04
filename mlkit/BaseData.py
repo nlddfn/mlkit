@@ -13,10 +13,10 @@ from sklearn.metrics import (confusion_matrix,
                              f1_score,
                              matthews_corrcoef)
 
-from clver.model_utils.base_model_utils import (eda,
-                                                lazyList,
-                                                label_encoder,
-                                                sen_spe_sup)
+from mlkit.base_model_utils import (eda,
+                                    lazyList,
+                                    label_encoder,
+                                    sen_spe_sup)
 
 
 class Data(object):

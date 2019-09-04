@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import IsolationForest
 from sklearn.externals import joblib
 
-from clver.model_utils.BaseModel import BaseModel
+from mlkit.BaseModel import BaseModel
 
 
 class BasePreProcessing(BaseModel):
