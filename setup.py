@@ -10,8 +10,7 @@ setup(
     use_scm_version=False,
     url='https://github.com/bonobos/mlkit',
     packages=find_packages(),
-    include_package_data=True,
-    # setup_requires=['setuptools_scm', 'pytest-runner'],
+    include_package_data=False,
     tests_require=['pytest'],
     install_requires=requirements,
     classifiers=[

@@ -4,8 +4,8 @@ from sklearn.externals import joblib
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 
-from clver.model_utils.BasePreProcessing import BasePreProcessing
-from clver.model_utils.base_model_utils import matthews_binary
+from mlkit.BasePreProcessing import BasePreProcessing
+from mlkit.base_model_utils import matthews_binary
 
 
 class BaseClassifier(BasePreProcessing):

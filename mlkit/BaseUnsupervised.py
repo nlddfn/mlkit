@@ -4,9 +4,9 @@ import numpy as np
 from sklearn.externals import joblib
 from sklearn.model_selection import GridSearchCV, ParameterGrid
 from sklearn.semi_supervised import LabelSpreading
-from clver.model_utils.BaseSupervised import BaseClassifier
-from clver.model_utils.BasePreProcessing import BasePreProcessing
-import clver.model_utils.base_model_utils as hp
+from mlkit.BaseSupervised import BaseClassifier
+from mlkit.BasePreProcessing import BasePreProcessing
+import mlkit.base_model_utils as hp
 from sklearn.metrics import (calinski_harabaz_score,
                              davies_bouldin_score)
 
