@@ -10,7 +10,7 @@ setup(
     name='mlkit',
     author='Diego De Lazzari',
     author_email='ddelazzari@bonobos.com',
-    version='1.0.1',
+    version='1.0.2',
     use_scm_version=False,
     long_description=long_description,
     long_description_content_type='text/markdown',
