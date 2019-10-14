@@ -128,6 +128,8 @@ class BaseModel(object):
             return self.ROC_AUC(model)
         elif metric == 'Precision_Recall':
             return self.Precision_Recall(model)
+        elif type(metric) == int:
+            return {0: metric}
         else:
             score_lst = []
             thr_lst = np.linspace(.01, .99, 50, endpoint=True)

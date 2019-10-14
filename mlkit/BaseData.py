@@ -48,6 +48,10 @@ class Data(object):
         #  Initiate logging
         self.log = logger
 
+        # Initiate class attribues
+        self.classes = None
+        self.nclas = None
+
     def EDA(self, what=['basic']):
         """Exploratory data analysis. Max(20000 samples)"""
         eda_frac = min(1, 20000 / self._X.shape[0])
