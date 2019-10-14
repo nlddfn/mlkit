@@ -128,6 +128,10 @@ class BaseModel(object):
             return self.ROC_AUC(model)
         elif metric == 'Precision_Recall':
             return self.Precision_Recall(model)
+        elif type(metric) == float:
+            assert 0 < metric < 1., \
+                'If the value for metric is numerical, it should be between 0 and 1'
+            return {0: metric}
         else:
             score_lst = []
             thr_lst = np.linspace(.01, .99, 50, endpoint=True)

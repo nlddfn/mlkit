@@ -5,7 +5,6 @@ from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 
 from mlkit.BasePreProcessing import BasePreProcessing
-from mlkit.base_model_utils import matthews_binary
 
 
 class BaseClassifier(BasePreProcessing):
@@ -17,7 +16,7 @@ class BaseClassifier(BasePreProcessing):
                         grid=None,
                         fit_params={},
                         cv_params={},
-                        metric=matthews_binary,
+                        threshold_metric=0.5,
                         return_prob=False,
                         owr=False,
                         model_bin=None):
@@ -88,7 +87,7 @@ class BaseClassifier(BasePreProcessing):
             # If binary, use ROC to set model.class_threshold
             if self.data.nclas == 2:
                 best_est.class_threshold = self.threshold_optimization_by_metric(
-                    metric=metric, model=best_est)
+                    metric=threshold_metric, model=best_est)
                 self.log(
                     'Classification threshold is {}'.format(
                         round(best_est.class_threshold[0], 2)))
