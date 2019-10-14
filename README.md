@@ -1,5 +1,6 @@
 # ML Kit: a wrapper around scikit-learn
 ## Getting Started
+Clone the repo and set a virtual environment. Tox expects Python 3.7 nevertheless the code is tested also in python 3.6. Should `make test` fail, please change tox.ini to account for your version of python.
 
 * `make test`
 

@@ -143,7 +143,7 @@ class Ensemble(object):
 
         pred_lst = []
         # Create ensemble data obj
-        for i, pipe in enumerate(self.pipe_list):
+        for pipe in self.pipe_list:
             data, model = pipe.run(data)
             pred = data.get_prediction(model)
             pred_lst.append(pred)
@@ -154,7 +154,7 @@ class Ensemble(object):
 
         # Create Data obj for final estimator
         ens_data = Data(df=ens_df,
-                        log_path=getattr(data, 'log'),
+                        logger=getattr(data, 'log'),
                         target=getattr(data, '_target'))
         setattr(ens_data, 'classes', data.classes)
         setattr(ens_data, 'nclas', data.nclas)
@@ -185,7 +185,7 @@ class Ensemble(object):
         ens_df.columns = list(range(ens_df.shape[1]))
 
         ens_data = Data(df=ens_df,
-                        log_path=getattr(data, 'model_path'),
+                        logger=getattr(data, 'log'),
                         target=getattr(data, '_target'))
         pred = self.ens_pip.predict(ens_data)
 

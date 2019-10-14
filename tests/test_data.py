@@ -1,5 +1,5 @@
 
-from mlkit.BaseData import Data, Validator
+from mlkit.BaseData import Data
 from tests.test_base import TestBase
 
 
@@ -15,17 +15,6 @@ class TestData(TestBase):
         obj.EDA(
             what=['basic', 'missing', 'remarkable', 'target_agg', 'target_imbalance']
         )
-
-    def test_validation(self, setup_data):
-        # First introduce fake data and model
-        data = self.data_mock_clas
-
-        v = Validator(
-            data_obj=data,
-            model_path='examples',
-            n_samples=100
-        )
-        v.run_validation(test=data)
 
     def test_mock_models(self, setup_model):
         # Classification
