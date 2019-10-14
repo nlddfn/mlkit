@@ -9,8 +9,8 @@ with open('requirements.txt', 'r') as fh:
 setup(
     name='mlkit',
     author='Diego De Lazzari',
-    author_email='ddelazzari@bonobos.com',
-    version='1.0.2',
+    author_email='diego.delazzari@gmail.com',
+    version='1.0.3',
     use_scm_version=False,
     long_description=long_description,
     long_description_content_type='text/markdown',
